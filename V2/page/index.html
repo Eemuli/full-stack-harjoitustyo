@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HyppyNet</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="code.js"></script>
+</head>
+<body onload="init()">
+  <div class="headerLogo">
+    <h1>HyppyNet</h1>
+    <p>Hyppypäiväkirja netissä</p>
+  </div>
+  <div id="container">
+    <input type="text" placeholder="Hyppy nro.*" id="newJumpNumber"
+    onkeypress="return /[0-9]/i.test(event.key)" onfocus="nextJumpNumber()"/>
+    <input type="text" placeholder="Päivä*" id="newJumpDate"/>
+    <input type="text" placeholder="Paikka*" id="newJumpPlace"/>
+    <input type="text" placeholder="Lentokone*" id="newJumpPlane"/>
+    <input type="text" placeholder="Päävarjo*" id="newJumpCanopy"/>
+    <input type="text" placeholder="Korkeus, m*" id="newJumpHeight" onkeypress="return /[0-9]/i.test(event.key)"/>
+    <input type="text" placeholder="Vapaa, s*" id="newJumpFalltime" 
+    onkeypress="return /[0-9]/i.test(event.key)" oninput="totalFalltime()"/>
+    <input type="text" placeholder="Vapaa yht., s*" id="newJumpTotalFalltime"
+    onkeypress="return /[0-9]/i.test(event.key)" onfocus="select()"
+    onblur="ifValueInSeconds(value)"/> 
+    
+    <input type="text" placeholder="Kommentit" id="newJumpComments"/>
+    <input type="text" placeholder="Medialinkki" id="newJumpLink"/>
+    <button onclick="addJump()" id="addJumpBtn">Lisää</button>
+    <p id="sortJumpsButton" onclick="changeJumpOrder()" style="display: none;">Järjestys ▼ </p>
+    <ul id="jumpsList"></ul>
+    <p id="infoText"></p>
+  </div>
+</body>
+</html>

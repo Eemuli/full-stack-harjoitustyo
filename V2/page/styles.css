@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+:root {
+    --dblue: #437fc7;
+    --lblue: #6daffe;
+    --grey: #edf6ff;
+    --orange: #f79256;
+}
+
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(135deg, rgb(112, 174, 250) 0%, rgb(51, 106, 173) 100%);
+    background-attachment: fixed;
+}
+
+.headerLogo {
+    color: white;
+    margin: 2em auto 4em;
+    width: 30em;
+    padding: 0 2em;
+}
+
+h1 {
+    font-weight: 800;
+    margin: 0.5em 0 0;
+}
+
+#container {
+    width: 26em;
+    background: white;
+    border-radius: 0.625em;
+    padding: 2em;
+    margin: 10px auto;
+}
+
+#addJumpBtn {
+    cursor: pointer;
+    display: block;
+    float: right;
+    background-color: var(--orange);
+    color: white;
+    text-decoration: none;
+    margin: 1em 0;
+    padding: .9em;
+    border: #ffb88f 0px solid;
+    border-radius: .25em;
+}
+
+#addJumpBtn:hover {
+    color: black;
+}
+
+#sortJumpsButton {
+    cursor: pointer;
+    float: none;
+    margin-top: 3em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 20px 0 20px 0;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+}
+
+.jumpItem {
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 16px 20px;
+    margin: 20px 0;
+}
+
+.fullJumpInfo {
+    margin: 0;
+}
+
+.fullJumpInfo li {
+    padding: 10px 0 0 0;
+}
+
+.jumpEditAndDeleteButtons {
+    color: darkred;
+    margin: 20px 0 0 0;
+    text-align: right;
+}
+
+.jumpEditAndDeleteButtons>img {
+    width: 1.2em;
+    padding-left: .8em;
+}
+
+.jumpEditAndDeleteButtons>img:hover {
+    /* Edit button #6daffe */
+    filter: invert(55%) sepia(76%) saturate(323%) hue-rotate(174deg) brightness(102%) contrast(102%);
+    cursor: pointer;
+}
+
+.jumpEditAndDeleteButtons>img:hover:last-child {
+    /* Delete button #fc1c1c */
+    filter: invert(25%) sepia(75%) saturate(5019%) hue-rotate(352deg) brightness(100%) contrast(97%);
+    cursor: pointer;
+
+}
+
+.jumpDate {
+    margin-left: 20px;
+}
+
+#newJumpNumber,
+#newJumpDate,
+#newJumpPlace,
+#newJumpPlane,
+#newJumpCanopy,
+#newJumpHeight,
+#newJumpFalltime,
+#newJumpTotalFalltime,
+#newJumpComments,
+#newJumpLink {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0.6em;
+    margin: 3px 0;
+    border: grey solid 0.0625em;
+    border-radius: 0.25em;
+    font-size: 1em;
+    width: 135.8px;
+}
+
+#newJumpFalltime,
+#newJumpTotalFalltime {
+    width: 205.9px;
+}
+
+#newJumpComments,
+#newJumpLink {
+    width: 100%;
+}
+
+.inputNumber,
+.inputDate {
+    outline: none;
+    border: none;
+    font-size: 1em;
+    background-color: #ccc;
+}
+
+.inputNumber {
+    width: 2.5em;
+}
+
+.inputDate {
+    width: 5em;
+    margin-left: 20px;
+}
+
+.expandJump {
+    float: right;
+    cursor: pointer;
+    z-index: 1;
+    padding: 1em 1.2em 1em 101%;
+    margin: -1em -1.2em -1em -101%;
+}
+
+.fullJumpInfo input {
+    outline: none;
+    border: none;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    background-color: #ccc;
+}
+
+.cancelDeleteButton {
+    float: right;
+    color: #fc1c1c;
+    cursor: pointer;
+}
+
+.edit {
+    cursor: pointer;
+    color: blue;
+    font-style: italic;
+}
+
+.delete {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
